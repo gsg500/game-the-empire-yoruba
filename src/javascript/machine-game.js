@@ -20,9 +20,17 @@ const pergunta = [
   ];
 
 
+  
 
 
 
+
+
+
+
+
+
+  /*
 class YorubaPeople {
     constructor(numQuestion, responder, saldoPontos) {
     this.numQuestion = numQuestion;
@@ -33,11 +41,11 @@ class YorubaPeople {
       if (this.responder === this.pergunta.resposta) {
         //DEVE RETORNA VALORES DE PONTUAÇÃO DO JOGADOR
         //DEVE RETORNA FALSE CASO O JOGADOR ERRE E TRUE SE O JOGADOR ACERTA         
-      } else if (/*se a pontuação do jogador for menor que zero será o fim do jogo*/this.saldoPontos) {
-        return 'Game over.'
+ */ //     } else if (/*se a pontuação do jogador for menor que zero será o fim do jogo*/this.saldoPontos) {
+     /*   return 'Game over.'
       }
   }
 };
 
-
+*/
 
