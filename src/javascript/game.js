@@ -1,82 +1,88 @@
-const questions = [
+const originalQuest = [
   {
     question: "1Quem é o Alaafin Oyo?",
     answers: [
-      { text: "Rei de Oyo", correct: true },
-      { text: "Negro Escravo", correct: false },
-      { text: "Cidade Yoruba", correct: false },
-      { text: "Presidente", correct: false }
+      { text: "111111Rei de Oyo", correct: true },
+      { text: "111111Negro Escravo", correct: false },
+      { text: "111111Cidade Yoruba", correct: false },
+      { text: "111111Presidente", correct: false }
     ]
   },
   {
     question: "2Quem é o Alaafin Oyo?",
     answers: [
-      { text: "Rei de Oyo", correct: true },
-      { text: "Negro Escravo", correct: false },
-      { text: "Cidade Yoruba", correct: false },
-      { text: "Presidente", correct: false }
+      { text: "2222Rei de Oyo", correct: true },
+      { text: "2222Negro Escravo", correct: false },
+      { text: "2222Cidade Yoruba", correct: false },
+      { text: "2222Presidente", correct: false }
     ]
   },
   {
     question: "3Quem é o Alaafin Oyo?",
     answers: [
-      { text: "Rei de Oyo", correct: true },
-      { text: "Negro Escravo", correct: false },
-      { text: "Cidade Yoruba", correct: false },
-      { text: "Presidente", correct: false }
+      { text: "333Rei de Oyo", correct: true },
+      { text: "333Negro Escravo", correct: false },
+      { text: "333Cidade Yoruba", correct: false },
+      { text: "333Presidente", correct: false }
     ]
   },
   {
     question: "4Quem é o Alaafin Oyo?",
     answers: [
-      { text: "Rei de Oyo", correct: true },
-      { text: "Negro Escravo", correct: false },
-      { text: "Cidade Yoruba", correct: false },
-      { text: "Presidente", correct: false }
+      { text: "4-Rei de Oyo", correct: true },
+      { text: "4-Negro Escravo", correct: false },
+      { text: "4-Cidade Yoruba", correct: false },
+      { text: "4-Presidente", correct: false }
     ]
   },
   {
     question: "5Quem é o Alaafin Oyo?",
     answers: [
-      { text: "Rei de Oyo", correct: true },
-      { text: "Negro Escravo", correct: false },
-      { text: "Cidade Yoruba", correct: false },
-      { text: "Presidente", correct: false }
+      { text: "55Rei de Oyo", correct: true },
+      { text: "55Negro Escravo", correct: false },
+      { text: "55Cidade Yoruba", correct: false },
+      { text: "55Presidente", correct: false }
     ]
   },
   {
     question: "6Quem é o Alaafin Oyo?",
     answers: [
-      { text: "Rei de Oyo", correct: true },
-      { text: "Negro Escravo", correct: false },
-      { text: "Cidade Yoruba", correct: false },
-      { text: "Presidente", correct: false }
+      { text: "66Rei de Oyo", correct: true },
+      { text: "66Negro Escravo", correct: false },
+      { text: "66Cidade Yoruba", correct: false },
+      { text: "66Presidente", correct: false }
     ]
   },
   {
     question: "7Quem é o Alaafin Oyo?",
     answers: [
-      { text: "Rei de Oyo", correct: true },
-      { text: "Negro Escravo", correct: false },
-      { text: "Cidade Yoruba", correct: false },
-      { text: "Presidente", correct: false }
+      { text: "77-Rei de Oyo", correct: true },
+      { text: "77-Negro Escravo", correct: false },
+      { text: "77-Cidade Yoruba", correct: false },
+      { text: "77-Presidente", correct: false }
     ]
   },
   {
     question: "8Quem é o Alaafin Oyo?",
     answers: [
-      { text: "Rei de Oyo", correct: true },
-      { text: "Negro Escravo", correct: false },
-      { text: "Cidade Yoruba", correct: false },
-      { text: "Presidente", correct: false }
+      { text: "8Rei de Oyo", correct: true },
+      { text: "8Negro Escravo", correct: false },
+      { text: "8Cidade Yoruba", correct: false },
+      { text: "8Presidente", correct: false }
     ]
   },
 ]; 
+
+function mistura(o) {
+  for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
+}
+let questions = mistura(originalQuest)
 //----------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------//
 
-let tempo = 30;
+let tempo = 90;
 let runningTimer;
 let score = 0;
 let username = "";
@@ -97,7 +103,7 @@ let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 startButton.addEventListener("click", startGame);
 highScoresButton.addEventListener("click", displayScores);
 
-function startGame() {
+function startGame() {  
   startButton.classList.add("hide");
   scoreArea.classList.add("hide");
   answerButtons.classList.remove("hide");

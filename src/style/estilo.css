@@ -47,6 +47,13 @@ h3{
     margin-bottom: 5rem;
 }
 
+.textoInfor{
+    font-size: 1.5rem;
+    color: #CEAF5D;
+    margin-bottom: 5rem;
+    display: inline-block;
+}
+
 .padraoTexto{
     color: #CEAF5D;
 }
