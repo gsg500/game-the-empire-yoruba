@@ -89,6 +89,7 @@ let username = "";
 let qNumber;
 let finalScore;
 const scoresXmaximo = 7;
+let ganhaPerde = '';
 
 const startButton = document.getElementById("startButton");
 const qContainer = document.getElementById("questionsContainer");
@@ -177,11 +178,16 @@ function showResults() {
   finalScore = tempo;
   if (finalScore < 0) {
     finalScore = 0;
-  }
+    ganhaPerde = 'Voce Perdeu';
+  } else if (finalScore <= 40){
+    ganhaPerde = 'Voce Perdeu';
+  } else if (finalScore > 40){
+    ganhaPerde = 'Parabens voce ganhou';
+  };
   qElement.innerText = "";
   scoreArea.classList.remove("hide");
   answerButtons.classList.add("hide");
-  scoreArea.innerHTML = `Sua pontuação é ${finalScore}!<div id="init" class="padraoTexto">Nome: <input type="text" name="initials" id="initials" placeholder="Digite seu nome aqui"><button id="save-btn" class="save-btn btn" onclick="submitScores(event)" disabled>Salvar</button><br/><a class="btn" href="https://gsg500.github.io/game-the-empire-yoruba/">Reiniciar</a>`;
+  scoreArea.innerHTML = `Sua pontuação é ${finalScore} ${ganhaPerde}!<div id="init" class="padraoTexto">Nome: <input type="text" name="initials" id="initials" placeholder="Digite seu nome aqui"><button id="save-btn" class="save-btn btn" onclick="submitScores(event)" disabled>Salvar</button><br/><a class="btn" href="https://gsg500.github.io/game-the-empire-yoruba/">Reiniciar</a>`;
   username = document.getElementById("initials");
   saveButton = document.getElementById("save-btn");
   username.addEventListener("keyup", function() {
