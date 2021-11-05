@@ -1,74 +1,74 @@
 const originalQuest = [
   {
-    question: "1Quem é o Alaafin Oyo?",
+    question: "Quem foi Oduduwa?",
     answers: [
-      { text: "111111Rei de Oyo", correct: true },
-      { text: "111111Negro Escravo", correct: false },
-      { text: "111111Cidade Yoruba", correct: false },
-      { text: "111111Presidente", correct: false }
+      { text: "Alaafin de Oyo", correct: false },
+      { text: "Pai de Oranmiyan", correct: true },
+      { text: "Filho de Akinkanju ", correct: false },
+      { text: "Chief de Ibadan", correct: false }
     ]
   },
   {
-    question: "2Quem é o Alaafin Oyo?",
+    question: "Dadá Ajacá foi o sucessor de?",
     answers: [
-      { text: "2222Rei de Oyo", correct: true },
-      { text: "2222Negro Escravo", correct: false },
-      { text: "2222Cidade Yoruba", correct: false },
-      { text: "2222Presidente", correct: false }
+      { text: "Ogundele", correct: false },
+      { text: "Sango", correct: false },
+      { text: "Oranmiyan", correct: true },
+      { text: "Moremi", correct: false }
     ]
   },
   {
-    question: "3Quem é o Alaafin Oyo?",
+    question: "Os Yorubas são conhecidos por serem?",
     answers: [
-      { text: "333Rei de Oyo", correct: true },
-      { text: "333Negro Escravo", correct: false },
-      { text: "333Cidade Yoruba", correct: false },
-      { text: "333Presidente", correct: false }
+      { text: "Muçulmanos", correct: false },
+      { text: "Povos pacíficos", correct: false },
+      { text: "Guerreiros violentos", correct: false },
+      { text: "Mais hábeis artesãos", correct: true }
     ]
   },
   {
-    question: "4Quem é o Alaafin Oyo?",
+    question: "A dinastia Yoruba passou 80 anos exilados apos a guerra contra os Nupes no?",
     answers: [
-      { text: "4-Rei de Oyo", correct: true },
-      { text: "4-Negro Escravo", correct: false },
-      { text: "4-Cidade Yoruba", correct: false },
-      { text: "4-Presidente", correct: false }
+      { text: "Reino de Borgu", correct: true },
+      { text: "Egito", correct: false },
+      { text: "Reino dos Males", correct: false },
+      { text: "Reino do Congo", correct: false }
     ]
   },
   {
-    question: "5Quem é o Alaafin Oyo?",
+    question: "Qual o nome do Rei chantageado pela coroa Britanica por mais de 20 anos???",
     answers: [
-      { text: "55Rei de Oyo", correct: true },
-      { text: "55Negro Escravo", correct: false },
-      { text: "55Cidade Yoruba", correct: false },
-      { text: "55Presidente", correct: false }
+      { text: "Alaafin Majeogbe", correct: false },
+      { text: "Alaafin Adelu", correct: false },
+      { text: "Alaafin Awole Arogangan", correct: false },
+      { text: "Alaafin Adeyemi I Alowolodu", correct: true }
     ]
   },
   {
-    question: "6Quem é o Alaafin Oyo?",
+    question: "Quais os principais produtos de exportação do Imperio Yoruba?",
     answers: [
-      { text: "66Rei de Oyo", correct: true },
-      { text: "66Negro Escravo", correct: false },
-      { text: "66Cidade Yoruba", correct: false },
-      { text: "66Presidente", correct: false }
+      { text: "Artesanado", correct: false },
+      { text: "Produtos agricolas", correct: false },
+      { text: "Metais e pedras preciosas", correct: true },
+      { text: "Produtos manufaturados", correct: false }
     ]
   },
   {
-    question: "7Quem é o Alaafin Oyo?",
+    question: "O idioma yoruba possui?",
     answers: [
-      { text: "77-Rei de Oyo", correct: true },
-      { text: "77-Negro Escravo", correct: false },
-      { text: "77-Cidade Yoruba", correct: false },
-      { text: "77-Presidente", correct: false }
+      { text: "Mais de 50 dialetos", correct: true },
+      { text: "Influencia Britanica", correct: false },
+      { text: "Origem portuguesa", correct: false },
+      { text: "Origem mulçumana", correct: false }
     ]
   },
   {
-    question: "8Quem é o Alaafin Oyo?",
+    question: "Os Yorubas são?",
     answers: [
-      { text: "8Rei de Oyo", correct: true },
-      { text: "8Negro Escravo", correct: false },
-      { text: "8Cidade Yoruba", correct: false },
-      { text: "8Presidente", correct: false }
+      { text: "Poligamos", correct: true },
+      { text: "Povos de origem subsaariana", correct: false },
+      { text: "Judeus", correct: false },
+      { text: "Povos nomades", correct: false }
     ]
   },
 ]; 
@@ -97,19 +97,19 @@ const answerButtons = document.getElementById("answers");
 const countdown = document.getElementById("timerArea");
 const scoreArea = document.getElementById("scoreArea");
 const highScoresButton = document.getElementById("showScoresButton");
-
 let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-
 startButton.addEventListener("click", startGame);
 highScoresButton.addEventListener("click", displayScores);
-
+/////////////////-/-/-/-/-/-/-/-/-/-/-/-/-//-
 function startGame() {  
-  startButton.classList.add("hide");
+  startButton.classList.add("hide");	
   scoreArea.classList.add("hide");
   answerButtons.classList.remove("hide");
   qNumber = 0;
   qContainer.classList.remove("hide");
   scoreArea.innerHTML = "";
+  document.getElementById("startButton").remove();
+  document.getElementById("showScoresButton").remove();	
   startClock();
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
@@ -122,7 +122,8 @@ function showQuestion(question) {
   question.answers.forEach(answer => {
     const button = document.createElement("button");
     button.innerText = answer.text;
-    button.classList.add("btn");
+    button.classList.add("yxtn");
+	  
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
@@ -165,11 +166,9 @@ function clearQuestion() {
 
 function gameOver() {
   clearInterval(runningTimer);
-  countdown.innerHTML = "Fim";
+  countdown.innerHTML = "Fim do Jogo";
   clearQuestion();
-  showResults();
-  startButton.innerText = "Reiniciar";
-  startButton.classList.remove("hide");
+  showResults(); 
   tempo = 90;
   score = 0;
 }
@@ -182,7 +181,7 @@ function showResults() {
   qElement.innerText = "";
   scoreArea.classList.remove("hide");
   answerButtons.classList.add("hide");
-  scoreArea.innerHTML = `Sua pontuação é ${finalScore}!<div id="init" class="padraoTexto">Nome: <input type="text" name="initials" id="initials" placeholder="Digite seu nome aqui"><button id="save-btn" class="save-btn btn" onclick="submitScores(event)" disabled>Save</button>`;
+  scoreArea.innerHTML = `Sua pontuação é ${finalScore}!<div id="init" class="padraoTexto">Nome: <input type="text" name="initials" id="initials" placeholder="Digite seu nome aqui"><button id="save-btn" class="save-btn btn" onclick="submitScores(event)" disabled>Salvar</button><br/><a class="btn" href="https://gsg500.github.io/game-the-empire-yoruba/">Reiniciar</a>`;
   username = document.getElementById("initials");
   saveButton = document.getElementById("save-btn");
   username.addEventListener("keyup", function() {
@@ -198,18 +197,16 @@ function submitScores(e) {
   highScores.push(score);
   highScores.sort((a, b) => b.score - a.score);
   highScores.splice(scoresXmaximo);
-
   localStorage.setItem("highScores", JSON.stringify(highScores));
   displayScores();
 }
 
-function displayScores() {
+function displayScores() {  
   clearInterval(runningTimer);
   countdown.innerHTML = "";
   clearQuestion();
   qElement.innerText = "";
-  scoreArea.classList.remove("hide");
-
+  scoreArea.classList.remove("hide");  
   scoreArea.innerHTML = `<h3 class="padraoTexto">Historico de melhor tempo</h3><ul id="highScoresList" class="padraoTexto"></ul><button id="clearScores" class="btn" onclick="clearScores()">Limpar Historico</button>`;
   const highScoresList = document.getElementById("highScoresList");
   highScoresList.innerHTML = highScores
@@ -217,12 +214,12 @@ function displayScores() {
       return `<li class="scoresList padraoTexto">${score.name} - ${score.score}</li>`;
     })
     .join("");
-  startButton.classList.remove("hide");
+  startButton.classList.remove("hide");	
   highScoresButton.classList.add("hide");
 }
 
 function clearScores() {
   highScores = [];
-  highScoresList.innerHTML = "<h4>Historico foi limpo</h4>";
+  highScoresList.innerHTML = `<h4>Historico foi limpo</h4><a class="btn" href="https://gsg500.github.io/game-the-empire-yoruba/">Reiniciar</a>`;
   document.getElementById("clearScores").classList.add("hide");
 }

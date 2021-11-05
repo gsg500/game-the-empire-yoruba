@@ -1,12 +1,11 @@
-# GAME THE EMPIRE YORUBA | Sobre o Jogo
+# GAME YORUBA EMPIRE | Sobre o Jogo
 
-The Empire Yoruba é um jogo de perguntas e respostas de fatos históricos marcantes na vida do povo de etnia Yoruba que vive hoje em sua maioria no território da Nigéria e países vizinhos.
+The Empire Yoruba é um jogo de perguntas e respostas de fatos históricos marcantes na vida do povo de etnia Yoruba que vive hoje em sua maioria no território da Nigéria e países vizinhos. Jogo desenvolvido ao longo de uma semana, Projeto 1 no curso de Web Development na Ironhack.
 
-## Devolução de valor cultural
-
-A ideia aqui é de valorizar o povo negro em especial de raça Yoruba, uma vez que colonizadores não apenas escravizaram povos negros mas também se apropriaram de diferentes tecnologias como a de fundir metais, deturparam suas crenças mesclando com ideias diabólicas algo nunca antes conhecido por estes povos e etc...
-
+Desenvolvido em HTML, CSS e JavaScript 
 ## Instruções 
 
 Link de acesso 
 https://gsg500.github.io/game-the-empire-yoruba/
+
+Apresentação: https://docs.google.com/presentation/d/e/2PACX-1vSw1NbkPwj4aSl4wi4crr-08P4aGykBrE9FasyjXy6r0UWeVc0QMsri9ELI9KNU7x8_5k9mfcIvZ73O/pub?start=false&loop=false&delayms=10000

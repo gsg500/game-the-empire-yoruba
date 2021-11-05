@@ -1,3 +1,19 @@
+.retanguloCaixa {
+	width: 500px;
+	border: 1px solid #CEAF5D;
+	position: absolute;
+	border-radius: 5px;
+
+}
+
+.retangulo2Caixa {
+	width: 420px;
+	border: 1px solid #CEAF5D;
+	position: absolute;
+	border-radius: 5px;
+
+}
+
 :root{
     background-color: #034106;
     font-size: 62.5%;
@@ -56,6 +72,7 @@ h3{
 
 .padraoTexto{
     color: #CEAF5D;
+	font-size:12px;
 }
 
 .container{
@@ -70,7 +87,7 @@ h3{
 }
 
 .container > *{
-    width: 100%;
+	width: 520px;
 }
 
 .flex-column{
@@ -119,3 +136,30 @@ h3{
     box-shadow: none;
     transform: none;
 }
+
+.yxtn{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #CEAF5D;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #CEAF5D;
+    background-color: rgb(13, 90, 39);
+}
+
+.yxtn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #ffffff;
+    transform: translate(-0.1rem);
+    transition: transform 150ms;
+}
+
+.yxtn[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
